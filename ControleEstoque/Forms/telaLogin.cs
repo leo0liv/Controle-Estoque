@@ -10,11 +10,23 @@ using System.Windows.Forms;
 
 namespace ControleEstoque
 {
-    public partial class Form1 : Form
+    public partial class telaLogin : Form
     {
-        public Form1()
+        public telaLogin()
         {
             InitializeComponent();
         }
+
+        private void telaLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBoxLogin_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
+    
 }
+
