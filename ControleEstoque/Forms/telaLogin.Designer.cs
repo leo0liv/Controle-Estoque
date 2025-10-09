@@ -28,35 +28,83 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbControleEstoque = new System.Windows.Forms.Label();
-            this.txtBoxLogin = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telaLogin));
+            this.inputLogin = new System.Windows.Forms.TextBox();
+            this.inputSenha = new System.Windows.Forms.TextBox();
+            this.btLogin = new System.Windows.Forms.Button();
+            this.lbLogin = new System.Windows.Forms.Label();
+            this.lbSenha = new System.Windows.Forms.Label();
+            this.pbLogoStockControl = new System.Windows.Forms.PictureBox();
+            this.linklbEsqueciSenha = new System.Windows.Forms.LinkLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoStockControl)).BeginInit();
             this.SuspendLayout();
             // 
-            // lbControleEstoque
+            // inputLogin
             // 
-            this.lbControleEstoque.AutoSize = true;
-            this.lbControleEstoque.Font = new System.Drawing.Font("Noto Sans", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbControleEstoque.Location = new System.Drawing.Point(141, 28);
-            this.lbControleEstoque.Name = "lbControleEstoque";
-            this.lbControleEstoque.Size = new System.Drawing.Size(510, 65);
-            this.lbControleEstoque.TabIndex = 0;
-            this.lbControleEstoque.Text = "Controle de Estoque";
+            this.inputLogin.Location = new System.Drawing.Point(478, 144);
+            this.inputLogin.Name = "inputLogin";
+            this.inputLogin.Size = new System.Drawing.Size(209, 20);
+            this.inputLogin.TabIndex = 1;
+            this.inputLogin.TextChanged += new System.EventHandler(this.txtBoxLogin_TextChanged);
             // 
-            // txtBoxLogin
+            // inputSenha
             // 
-            this.txtBoxLogin.Location = new System.Drawing.Point(231, 137);
-            this.txtBoxLogin.Name = "txtBoxLogin";
-            this.txtBoxLogin.Size = new System.Drawing.Size(288, 20);
-            this.txtBoxLogin.TabIndex = 1;
-            this.txtBoxLogin.TextChanged += new System.EventHandler(this.txtBoxLogin_TextChanged);
+            this.inputSenha.Location = new System.Drawing.Point(478, 185);
+            this.inputSenha.Name = "inputSenha";
+            this.inputSenha.PasswordChar = '*';
+            this.inputSenha.Size = new System.Drawing.Size(209, 20);
+            this.inputSenha.TabIndex = 2;
             // 
-            // textBox2
+            // btLogin
             // 
-            this.textBox2.Location = new System.Drawing.Point(231, 183);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(288, 20);
-            this.textBox2.TabIndex = 2;
+            this.btLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btLogin.FlatAppearance.BorderSize = 0;
+            this.btLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btLogin.Location = new System.Drawing.Point(585, 240);
+            this.btLogin.Name = "btLogin";
+            this.btLogin.Size = new System.Drawing.Size(102, 35);
+            this.btLogin.TabIndex = 3;
+            this.btLogin.Text = "Entrar";
+            this.btLogin.UseVisualStyleBackColor = false;
+            // 
+            // lbLogin
+            // 
+            this.lbLogin.AutoSize = true;
+            this.lbLogin.Location = new System.Drawing.Point(436, 147);
+            this.lbLogin.Name = "lbLogin";
+            this.lbLogin.Size = new System.Drawing.Size(36, 13);
+            this.lbLogin.TabIndex = 4;
+            this.lbLogin.Text = "Login:";
+            // 
+            // lbSenha
+            // 
+            this.lbSenha.AutoSize = true;
+            this.lbSenha.Location = new System.Drawing.Point(436, 188);
+            this.lbSenha.Name = "lbSenha";
+            this.lbSenha.Size = new System.Drawing.Size(41, 13);
+            this.lbSenha.TabIndex = 5;
+            this.lbSenha.Text = "Senha:";
+            this.lbSenha.Click += new System.EventHandler(this.lbSenha_Click);
+            // 
+            // pbLogoStockControl
+            // 
+            this.pbLogoStockControl.Image = ((System.Drawing.Image)(resources.GetObject("pbLogoStockControl.Image")));
+            this.pbLogoStockControl.Location = new System.Drawing.Point(37, 12);
+            this.pbLogoStockControl.Name = "pbLogoStockControl";
+            this.pbLogoStockControl.Size = new System.Drawing.Size(393, 393);
+            this.pbLogoStockControl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogoStockControl.TabIndex = 6;
+            this.pbLogoStockControl.TabStop = false;
+            // 
+            // linklbEsqueciSenha
+            // 
+            this.linklbEsqueciSenha.AutoSize = true;
+            this.linklbEsqueciSenha.Location = new System.Drawing.Point(601, 208);
+            this.linklbEsqueciSenha.Name = "linklbEsqueciSenha";
+            this.linklbEsqueciSenha.Size = new System.Drawing.Size(86, 13);
+            this.linklbEsqueciSenha.TabIndex = 7;
+            this.linklbEsqueciSenha.TabStop = true;
+            this.linklbEsqueciSenha.Text = "Esqueci a senha";
             // 
             // telaLogin
             // 
@@ -64,21 +112,29 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.txtBoxLogin);
-            this.Controls.Add(this.lbControleEstoque);
+            this.Controls.Add(this.linklbEsqueciSenha);
+            this.Controls.Add(this.pbLogoStockControl);
+            this.Controls.Add(this.lbSenha);
+            this.Controls.Add(this.lbLogin);
+            this.Controls.Add(this.btLogin);
+            this.Controls.Add(this.inputSenha);
+            this.Controls.Add(this.inputLogin);
             this.Name = "telaLogin";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.telaLogin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoStockControl)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbControleEstoque;
-        private System.Windows.Forms.TextBox txtBoxLogin;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox inputLogin;
+        private System.Windows.Forms.TextBox inputSenha;
+        private System.Windows.Forms.Button btLogin;
+        private System.Windows.Forms.Label lbLogin;
+        private System.Windows.Forms.Label lbSenha;
+        private System.Windows.Forms.PictureBox pbLogoStockControl;
+        private System.Windows.Forms.LinkLabel linklbEsqueciSenha;
     }
 }

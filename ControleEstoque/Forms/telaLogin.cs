@@ -26,6 +26,16 @@ namespace ControleEstoque
         {
             
         }
+
+        private void lbControleEstoque_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbSenha_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }
